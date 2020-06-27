@@ -11,7 +11,8 @@ class Main extends Controller {
     function Index () {
 
         $this->view("template/header");
-        $this->view("main/index");
+        $this->view("main/home-nav");
+        $this->view("main/home-body");
         $this->view("template/footer");
         
     }
