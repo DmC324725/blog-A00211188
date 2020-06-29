@@ -17,6 +17,15 @@ class Main extends Controller {
         
     }
 
+    function blogListing() {
+        this->view("template/header");
+        this->view("template/blog-nav");
+        this->view("template/blog-item");
+        this->view("template/blog-item");
+        this->view("template/blog-closure");
+        this->view("template/footer");
+    }
+
 }
 
 ?>
