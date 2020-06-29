@@ -15,8 +15,8 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/Blog-A00211188/public/css/base.css">
+    <link rel="stylesheet" href="/Blog-A00211188/public/css/main.css">
 
     <!-- script
     ================================================== -->
