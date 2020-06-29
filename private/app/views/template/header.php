@@ -20,8 +20,8 @@
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
+    <script src="/public/js/modernizr.js"></script>
+    <script defer src="/public/js/fontawesome/all.min.js"></script>
 
    
 </head>

@@ -29,8 +29,8 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/public/js/jquery-3.2.1.min.js"></script>
+    <script src="/public/js/main.js"></script>
 
 </body>
 
