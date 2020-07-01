@@ -4,8 +4,8 @@
 
      <ul class="s-header__nav">
          <li class="current"><a href="/">Home</a></li>
-                 <li><a href="/main/blogListing">Blog Entries</a></li>
-                 <li><a href="single.html">Single Blog</a></li>
+                 <li><a href="/Listing">Blog Entries</a></li>
+                 <li><a href="Blog">Single Blog</a></li>
      </ul>
  </div> 
 </nav> 
