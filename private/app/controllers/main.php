@@ -17,7 +17,7 @@ class Main extends Controller {
         
     }
 
-    function Listing() {
+    function Listingg () {
         $this->view("template/header");
         $this->view("template/blog-nav");
         $this->view("template/blog-item");
@@ -26,7 +26,7 @@ class Main extends Controller {
         $this->view("template/footer");
     }
 
-    function Blog(){
+    function Blogg () {
         $this->view("template/header");
         $this->view("template/entry-nav");
         $this->view("template/entry-body");
