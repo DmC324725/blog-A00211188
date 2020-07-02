@@ -10,15 +10,10 @@ class Main extends Controller {
      */
     function Index () {
 
-        // $this->view("template/header");
-        // $this->view("template/home-nav");
-        // $this->view("template/home-body");
-        // $this->view("template/footer");
-
-        $this->view("template/head");
-        $this->view("template/top");
-        $this->view("template/middle");
-        $this->view("template/lower");
+        $this->view("template/header");
+        $this->view("template/home-nav");
+        $this->view("template/home-body");
+        $this->view("template/footer");
 
         
     }
