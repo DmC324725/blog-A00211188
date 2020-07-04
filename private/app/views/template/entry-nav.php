@@ -1,13 +1,13 @@
 <nav class="s-header__nav-wrap">
 
            <div class="row">
-
+                <nav>
                 <ul class="s-header__nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog Entries</a></li>
                     <li class="current"><a href="single.html">Single Blog</a></li>
                 </ul> <!-- end #nav -->
-
+                </nav>
            </div> 
 
         </nav> <!-- end #nav-wrap -->
