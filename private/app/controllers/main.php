@@ -39,6 +39,17 @@ class Main extends Controller {
 
         
     } 
+    function Entry () {
+
+        $this->view("template/header");
+        $this->view("entry/entry-nav");
+        $this->view("entry/entry-body");
+        $this->view("entry/entry-comments");
+        $this->view("entry/entry-addcomment");
+        $this->view("template/footer");
+
+        
+    }
 
     
 }
