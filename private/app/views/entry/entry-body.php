@@ -2,7 +2,7 @@
 
                     <header class="entry__header">
 
-                        <h2 class="entry__title h1">Hey, We Love Open Sans!</h2>
+                        <h2 class="entry__title h1">Top 10 Programming Languages of 2020!</h2>
 
                         <div class="entry__meta">
                             <ul>

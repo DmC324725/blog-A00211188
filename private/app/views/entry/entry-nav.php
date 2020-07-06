@@ -3,9 +3,9 @@
            <div class="row">
                 <nav>
                 <ul class="s-header__nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog Entries</a></li>
-                    <li class="current"><a href="single.html">Single Blog</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/main/listing">Blog Entries</a></li>
+                    <li class="current"><a href="/main/entry">Single Blog</a></li>
                 </ul> <!-- end #nav -->
                 </nav>
            </div> 
