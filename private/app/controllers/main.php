@@ -26,6 +26,17 @@ class Main extends Controller {
         $this->view("template/blog-closure");
         $this->view("template/footer");
     }
+    function Listing () {
+
+        $this->view("template/header");
+        $this->view("listing/listing-nav");
+        $this->view("template/listing-item");
+        $this->view("template/listing-item");
+        $this->view("listing/listing-closure");
+        $this->view("template/footer");
+
+        
+    }
 
     
 }
