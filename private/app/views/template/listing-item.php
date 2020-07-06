@@ -9,7 +9,7 @@
                         <div class="entry__meta">
                             <ul>
                                 <li><?php echo $date; ?></li>
-                                <li><a href="/main/entry?title=<?php echo ?>" title="" rel="category tag"><?php echo $category; ?></a></li>
+                                <li><a href="/main/entry" title="" rel="category tag"><?php echo $category; ?></a></li>
                                 <li><?php echo $writer; ?></li>
                             </ul>
                         </div>
