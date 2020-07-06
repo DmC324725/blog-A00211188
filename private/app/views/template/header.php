@@ -23,7 +23,7 @@
     <script src="/public/js/modernizr.js"></script>
     <script defer src="/public/js/fontawesome/all.min.js"></script>
 
-   
+    <title><?php echo $title; ?></title>
 </head>
 
 <body id="top">

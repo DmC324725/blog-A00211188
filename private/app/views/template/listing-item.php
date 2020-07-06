@@ -3,14 +3,14 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="single.html" title="">Hey, We Love Open Sans!</a>
+                            <a href="single.html" title=""><?php echo $title; ?></a>
                         </h2>
 
                         <div class="entry__meta">
                             <ul>
-                                <li>July 12, 2019</li>
-                                <li><a href="#0" title="" rel="category tag">Ghost</a></li>
-                                <li>John Doe</li>
+                                <li><?php echo $date; ?></li>
+                                <li><a href="#0" title="" rel="category tag"><?php echo $category; ?></a></li>
+                                <li><?php echo $writer; ?></li>
                             </ul>
                         </div>
                      
