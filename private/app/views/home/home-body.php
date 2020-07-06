@@ -35,6 +35,7 @@
                                 occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in 
                                 adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
                                 </p>
+
                     </div> 
 
                 </article> <!-- end entry -->

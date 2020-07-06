@@ -3,13 +3,13 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="single.html" title=""><?php echo $title; ?></a>
+                            <a href="/main/entry" title=""><?php echo $title; ?></a>
                         </h2>
 
                         <div class="entry__meta">
                             <ul>
                                 <li><?php echo $date; ?></li>
-                                <li><a href="/main/entry" title="" rel="category tag"><?php echo $category; ?></a></li>
+                                <li><?php echo $category; ?></li>
                                 <li><?php echo $writer; ?></li>
                             </ul>
                         </div>
