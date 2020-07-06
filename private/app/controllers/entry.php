@@ -1,6 +1,6 @@
 <?php
 
-class Listing extends Controller {
+class Entry extends Controller {
 
     function __construct() {
         parent::__construct();
@@ -11,10 +11,10 @@ class Listing extends Controller {
     function Index () {
 
         $this->view("template/header");
-        $this->view("listing/listing-nav");
-        $this->view("template/listing-item");
-        $this->view("template/listing-item");
-        $this->view("listing/listing-closure");
+        $this->view("entry/entry-nav");
+        $this->view("entry/entry-body");
+        $this->view("entry/entry-comments");
+        $this->view("entry/entry-addcomment");
         $this->view("template/footer");
 
         

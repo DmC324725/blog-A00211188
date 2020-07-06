@@ -11,8 +11,8 @@ class Main extends Controller {
     function Index () {
 
         $this->view("template/header");
-        $this->view("template/home-nav");
-        $this->view("template/home-body");
+        $this->view("home/home-nav");
+        $this->view("home/home-body");
         $this->view("template/footer");
 
         
@@ -27,15 +27,7 @@ class Main extends Controller {
         $this->view("template/footer");
     }
 
-    function Blogg () {
-        $this->view("template/header");
-        $this->view("template/entry-nav");
-        $this->view("template/entry-body");
-        $this->view("template/entry-comments");
-        $this->view("template/entry-addcomment");
-        $this->view("template/footer");
-    }
-
+    
 }
 
 ?>
