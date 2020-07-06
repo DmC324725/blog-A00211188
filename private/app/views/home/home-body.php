@@ -3,7 +3,7 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="single.html" title="">Hey, want to know more about our awesome work?</a>
+                            Hey, want to know more about our awesome work?
                         </h2>
 
                        <br>
@@ -45,7 +45,7 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="single.html" title="">Join the community!</a>
+                            Join the community!
                         </h2>
                     
                         <br/>
@@ -69,7 +69,7 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="single.html" title="">White Space Everywhere.</a>
+                            White Space Everywhere.
                         </h2>
                     
                         <div class="entry__meta">
@@ -103,7 +103,7 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="single.html" title="">Follow your Passion!</a>
+                            Follow your Passion!
                         </h2>
                     <br>
                      
