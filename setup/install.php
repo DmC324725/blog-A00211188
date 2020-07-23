@@ -2,7 +2,7 @@
 require "config.php";
 try {
  $connection = new PDO("mysql:host=$host", $username, $password);
- $sql = file_get_contents("data/init.sql");
+ $sql = file_get_contents("blog-A00211188/setup/data/init.sql");
  $connection->exec($sql);
  
  echo "Database and table users created successfully.";
