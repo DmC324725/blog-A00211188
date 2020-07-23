@@ -10,4 +10,9 @@ class BlogModel extends Model{
 
         return $res[0];
     }
+
+    function getBlogList() {
+        $sql = 'SELECT * FROM Blogs'
+    }
+
 }                           
