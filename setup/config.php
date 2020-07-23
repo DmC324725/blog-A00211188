@@ -1,7 +1,7 @@
 <?
     $driver = "mysql";
-    $dbhost = "";
-    $dbname = "db";
+    $host = "db";
+    $dbname = "";
     $username = "root";
     $password = "root";
 ?>
