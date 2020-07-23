@@ -1,6 +1,6 @@
 <?
     $driver = "mysql";
-    $host = "db";
+    $host = "localhost";
     $dbname = "";
     $username = "root";
     $password = "root";
