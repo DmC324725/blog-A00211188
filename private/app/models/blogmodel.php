@@ -21,7 +21,7 @@ class BlogModel extends Model{
 
         return $res;
     }
-    function getBlog($slug){
+    function getBlogPost($slug){
         $sql = 'SELECT * FROM blog_posts WHERE slug = ?';
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($slug));
