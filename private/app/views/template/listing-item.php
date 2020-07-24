@@ -5,7 +5,7 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="/main/entry" title=""><?php echo $post_name; ?></a>
+                            <a href="/main/entry/<?php echo $slug ?>" title=""><?php echo $post_name; ?></a>
                         </h2>
 
                         <div class="entry__meta">
@@ -16,9 +16,9 @@
                         </div>
                      
                     </header>
-                    
+<!--                     
                     <div class="entry__content">
                         <?php echo $post_content; ?>   
-                    </div> 
+                    </div>  -->
 
                 </article> <!-- end entry -->

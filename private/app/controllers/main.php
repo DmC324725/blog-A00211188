@@ -49,7 +49,7 @@ class Main extends Controller {
 
         
     } 
-    function Entry () {
+    function Entry ($slug) {
 
         $this->view("template/header");
         $this->view("entry/entry-nav");
