@@ -1,4 +1,4 @@
-<?
+<?php
     $driver = "mysql";
     $host = "db";
     $dbname = "";
