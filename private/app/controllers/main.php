@@ -34,16 +34,6 @@ class Main extends Controller {
         }
 
 
-        // $data = Array("title"=>"10 Lifehacks as a programmer","writer"=>"John Doe","date"=>"12 July, 2020", "category"=>"Tech");
-        // $this->view("template/listing-item",$data);
-        // $data = Array("title"=>"Best programming languages of 2020","writer"=>"John Doe","date"=>"2 July, 2020", "category"=>"Tech");
-        // $this->view("template/listing-item",$data);
-        // $data = Array("title"=>"All you need to know about Android Jetpack","writer"=>"John Doe","date"=>"15 July, 2020", "category"=>"Tech");
-        // $this->view("template/listing-item",$data);
-        // $data = Array("title"=>"Top 10 Web Development tools","writer"=>"John Doe","date"=>"17 July, 2020", "category"=>"Tech");
-        // $this->view("template/listing-item",$data);
-        // $data = Array("title"=>"Learn Java in a week","writer"=>"John Doe","date"=>"18 July, 2020", "category"=>"Tech");
-        // $this->view("template/listing-item",$data);
         $this->view("listing/listing-closure");
         $this->view("template/footer");
 

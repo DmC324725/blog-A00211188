@@ -6,7 +6,7 @@ class BlogModel extends Model{
 
     function DbVersion() {
         $sql = 'SELECT VERSION()';
-        $stmt = this->db->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $res = $stmt->fetch();
 
@@ -15,7 +15,7 @@ class BlogModel extends Model{
 
     function getBlogList() {
         $sql = 'SELECT * FROM blog_posts';
-        $stmt = this->db->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $res = $stmt->fetch();
 
@@ -23,7 +23,7 @@ class BlogModel extends Model{
     }
     function getBlog($slug){
         $sql = 'SELECT * FROM blog_posts WHERE slug = ?';
-        $stmt = this->db->prepare($sql);
+        $stmt = $this->db->prepare($sql);
         $stmt->execute(array($slug));
         $res = $stmt->fetch();
 
