@@ -2,6 +2,7 @@
 class BlogModel extends Model{
     function __construct() {
         parent::__construct();
+        $this->db = new PDO("mysql:host=db", "root", "root");
     }
 
     function DbVersion() {
