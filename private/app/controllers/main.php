@@ -23,11 +23,12 @@ class Main extends Controller {
 
         $this->model('blogmodel');
         $posts = $this->blogmodel->getBlogList();
+        
         //$entries = Array("How to train your dragon?","Kung Fu Panda.","10 Ways to learn programming.","Best programming Languages right now.");
         $data = Array("title"=>"Blog Listing");
         $this->view("template/header",$data);
         $this->view("listing/listing-nav");
-        
+        echo $posts;
         //Calling Template for each post found
         foreach($posts as $post){
             $this->view("template/listing-item",$post);
