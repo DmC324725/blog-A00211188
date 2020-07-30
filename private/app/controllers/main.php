@@ -28,7 +28,6 @@ class Main extends Controller {
         $data = Array("title"=>"Blog Listing");
         $this->view("template/header",$data);
         $this->view("listing/listing-nav");
-        echo $posts;
         //Calling Template for each post found
         foreach($posts as $post){
             $this->view("template/listing-item",$post);
