@@ -26,7 +26,6 @@ class BlogModel extends Model{
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($slug));
         $res = $stmt->fetch();
-        print_r($res);
         return $res;
     }
 
