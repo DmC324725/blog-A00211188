@@ -2,7 +2,7 @@
 class BlogModel extends Model{
     function __construct() {
         parent::__construct();
-        $this->db = new PDO("mysql:host=db", "root", "root");
+        $this->db = new PDO("mysql:host=db;dbname=database", "root", "root");
     }
 
     function DbVersion() {
@@ -18,7 +18,7 @@ class BlogModel extends Model{
         $sql = 'SELECT * FROM blog_posts';
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
-        $res = $stmt->fetch();
+        $res = $stmt->fetchAll();
         return $res;
     }
     function getBlogPost($slug){

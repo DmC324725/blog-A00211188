@@ -30,6 +30,7 @@ class Main extends Controller {
         $this->view("listing/listing-nav");
         //Calling Template for each post found
         foreach($posts as $post){
+            print_r($post);
             $this->view("template/listing-item",$post);
         }
 
