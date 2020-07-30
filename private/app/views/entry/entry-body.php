@@ -7,7 +7,7 @@
                         <div class="entry__meta">
                             <ul>
                                 <li><?php echo $publish_date;?></li>
-                                <li><?php echo $author_email;</li>
+                                <li><?php echo $author_email;?></li>
                             </ul>
                         </div>
                      
@@ -21,6 +21,11 @@
                     </div>
 
                     <div class="entry__content">
+                        <?php echo $post_content;?>
+                        <br>
+                        <?php echo $post_content;?><br>
+                        <?php echo $post_content;?><br>
+                        <?php echo $post_content;?><br>
                         <?php echo $post_content;?>
                     </div> <!-- entry__content -->
 
