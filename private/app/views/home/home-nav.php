@@ -5,7 +5,7 @@
      <ul class="s-header__nav">
          <li class="current"><a href="/">Home</a></li>
                  <li><a href="/main/listing">Blog Entries</a></li>
-                 <li><a href="/main/Blogg">Single Blog</a></li>
+                 <li><a href="/main/entry">Single Blog</a></li>
      </ul>
      </nav>
  </div> 

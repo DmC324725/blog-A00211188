@@ -39,7 +39,7 @@ class Main extends Controller {
 
         
     } 
-    function Entry ($slug) {
+    function Entry ($slug = "johndoe2slug") {
         $this->model('blogmodel');
         $post = $this->blogmodel->getBlogPost($slug);
 
