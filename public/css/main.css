@@ -2605,3 +2605,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         border-left: none;
     }
 }
+
+
+
+
+/* THIS AREA IS CUSTOMIZED BY FAISAL KHAN */
+
+#post-title{
+    width: 100%;
+}
+
+#post-content{
+    width: 100%;
+}
