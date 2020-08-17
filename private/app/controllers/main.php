@@ -38,6 +38,13 @@ class Main extends Controller {
         $this->view("template/footer");
 
         
+    }
+    function New_Post($slug = ""){
+        $this->view("template/header");
+        $this->view("newpost/newpost-nav");
+        $this->view("newpost/newpost-body");
+        $this->view("template/footer");
+
     } 
     function Entry ($slug = "johndoe2slug") {
         $this->model('blogmodel');
