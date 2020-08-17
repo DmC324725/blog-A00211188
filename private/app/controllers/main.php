@@ -39,7 +39,7 @@ class Main extends Controller {
 
         
     }
-    function Newpost($slug = ""){
+    function New_Post($slug = ""){
         $this->view("template/header");
         $this->view("newpost/newpost-nav");
         $this->view("newpost/newpost-body");
