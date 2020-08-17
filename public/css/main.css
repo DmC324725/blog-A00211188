@@ -2608,5 +2608,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-
+.newinput{
+    width: 100%;
+}
+#submit-btn-div{
+    align-content: center;
+}
 
