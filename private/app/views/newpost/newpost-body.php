@@ -7,5 +7,5 @@
 <br/>
 <div style="width:100%;display:flex; justify-content:center;">
 <input type = "submit" value="Post" id="submit-post" name = "submit-post" />
-<div>
+</div>
 </form>
