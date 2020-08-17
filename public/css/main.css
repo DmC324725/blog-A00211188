@@ -2611,6 +2611,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 /* THIS AREA IS CUSTOMIZED BY FAISAL KHAN */
 
-.newinput{
+input#post-title{
+    width: 100%;
+}
+textarea#post-content{
     width: 100%;
 }
