@@ -2611,10 +2611,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 /* THIS AREA IS CUSTOMIZED BY FAISAL KHAN */
 
-#post-title{
-    width: 100%;
-}
-
-#post-content{
+.newinput{
     width: 100%;
 }
