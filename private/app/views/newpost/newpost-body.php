@@ -1,4 +1,4 @@
-<form>
+<form method = "post">
 
 <input type = "text" class="newinput" name = "post-title" id="post-title" style = "width:100%;" placeholder="Post Title"/>
 <br/>
@@ -9,3 +9,11 @@
 <input type = "submit" value="Post" id="submit-post" name = "submit-post" />
 </div>
 </form>
+
+<?php 
+
+    if(isset('submit-post')){
+        echo "<script type='text/javascript'>alert('Hello World');</script>";
+    }
+
+?>
