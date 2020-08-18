@@ -15,10 +15,18 @@
     if(isset($_POST['submit'])){
 
         //Get the data and run SQL Statement to insert into 
-        $tittle = $_POST['post-title'];        
+        $post_title = $_POST['post-title'];        
+        $post_content = $_POST['post-content'];
 
+        $slug = str_replace(' ','_',$post_title);
+        $slug = $slug + rand(1000,9999);
 
-        echo "<script type='text/javascript'>alert('$tittle');</script>";
+        $postVals = array($slug,$post_title,$post_content,'static@email.com');
+        print_r($postVals);
+        // $this->model('blogmodel');
+        // $post = $this->blogmodel->insertBlogPost($postVals);
+
+        echo "<script type='text/javascript'>alert('$slug');</script>";
     }
 
 ?>

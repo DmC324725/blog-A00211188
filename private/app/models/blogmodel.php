@@ -29,6 +29,16 @@ class BlogModel extends Model{
         return $res;
     }
 
+    function insertBlogPost($postVals){
+        //slug, title, content, email, time
+        $sql = 'INSERT INTO blog_posts VALUES(?,?,?,?,now())';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($postVals);
+        $res = $stmt->fetch();
+        return $res;
+    }
+
+
 }                           
 
 ?>
