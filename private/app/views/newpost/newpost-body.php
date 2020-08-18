@@ -21,7 +21,7 @@
         //Get the data and run SQL Statement to insert into 
         $edit_post_title = $_POST['post-title'];        
         $edit_post_content = $_POST['post-content'];
-        if(strlen($slug) > 3){
+        if(is_string($slug)){
             $postVals = array($slug,$edit_post_title,$edit_post_content,$author_email); 
         }else{
             $edit_slug = str_replace(' ','_',$edit_post_title);
