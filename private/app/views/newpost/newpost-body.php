@@ -1,4 +1,4 @@
-<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>";?>
+<?php //echo "<script type='text/javascript'>console.log('Page Load Started');</script>";?>
 <form method = "post">
 
 <input type = "text" class="newinput" name = "post-title" id="post-title" style = "width:100%;" placeholder="Post Title" value = "<?php if(is_string($post_name)){echo "$post_name";} ?>"/>
@@ -11,13 +11,13 @@
 </div>
 </form>
 
-<?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
+<?php //echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
 
 <?php 
 
     if(isset($_POST['submit'])){
         
-        <?php echo "<script type='text/javascript'>console.log('Script Run Started');</script>";?>
+        <?php //echo "<script type='text/javascript'>console.log('Script Run Started');</script>";?>
         //Get the data and run SQL Statement to insert into 
         $edit_post_title = $_POST['post-title'];        
         $edit_post_content = $_POST['post-content'];
@@ -30,8 +30,7 @@
         }
          $this->model('blogmodel');
          $edit_post = $this->blogmodel->insertBlogPost($postVals);
-         <?php echo "<script type='text/javascript'>console.log('Script Run Complete');</script>";?>
-        echo "<script type='text/javascript'>alert('Command RAN');</script>";
+         <?php //echo "<script type='text/javascript'>console.log('Script Run Complete');</script>";?>
     }
 
 ?>
