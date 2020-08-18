@@ -37,6 +37,15 @@ class BlogModel extends Model{
         $res = $stmt->fetch();
         return $res;
     }
+    function updateBlogPost($postVals){
+        //slug, title, content, email, time
+        $sql = 'UPDATE blog_posts SET post_name = ? , post_content = ?, publish_date = now() WHERE slug = ?';
+        $stmt = $this->db->prepare($sql);
+        
+        $stmt->execute($postVals);
+        $res = $stmt->fetch();
+        return $res;
+    }
 
 
 }                           
