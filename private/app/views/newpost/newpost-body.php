@@ -23,7 +23,8 @@
         $edit_post_content = $_POST['post-content'];
         echo "<script type='text/javascript'>console.log('Script Run Started');</script>";
         if(is_string($slug)){
-            echo "<script type='text/javascript'>console.log('Script Run TRUE');</script>";
+            echo "<script type='text/javascript'>console.log('Script Run TRUE $slug');</script>";
+
             $postVals = array($slug,$edit_post_title,$edit_post_content,$author_email); 
         }else{
             echo "<script type='text/javascript'>console.log('Script Run FALSE');</script>";
