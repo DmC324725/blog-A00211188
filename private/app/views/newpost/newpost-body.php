@@ -23,10 +23,10 @@
 
         $postVals = array($slug,$post_title,$post_content,'static@email.com');
         print_r($postVals);
-        // $this->model('blogmodel');
-        // $post = $this->blogmodel->insertBlogPost($postVals);
-
-        echo "<script type='text/javascript'>alert('$slug');</script>";
+         $this->model('blogmodel');
+         $post = $this->blogmodel->insertBlogPost($postVals);
+        
+        echo "<script type='text/javascript'>alert('$post');</script>";
     }
 
 ?>
