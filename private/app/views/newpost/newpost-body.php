@@ -21,15 +21,18 @@
         //Get the data and run SQL Statement to insert into 
         $edit_post_title = $_POST['post-title'];        
         $edit_post_content = $_POST['post-content'];
+        echo "<script type='text/javascript'>console.log('Script Run Started');</script>";
         if(is_string($slug)){
+            echo "<script type='text/javascript'>console.log('Script Run TRUE');</script>";
             $postVals = array($slug,$edit_post_title,$edit_post_content,$author_email); 
         }else{
+            echo "<script type='text/javascript'>console.log('Script Run FALSE');</script>";
             $edit_slug = str_replace(' ','_',$edit_post_title);
             $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
             $postVals = array($edit_slug,$edit_post_title,$edit_post_content,'static@email.com');
         }
-         $this->model('blogmodel');
-         $edit_post = $this->blogmodel->insertBlogPost($postVals);
+        //  $this->model('blogmodel');
+        //  $edit_post = $this->blogmodel->insertBlogPost($postVals);
          echo "<script type='text/javascript'>console.log('Script Run Complete');</script>";
     }
 
