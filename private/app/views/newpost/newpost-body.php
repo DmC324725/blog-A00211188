@@ -1,9 +1,9 @@
 <form method = "post">
 
-<input type = "text" class="newinput" name = "post-title" id="post-title" style = "width:100%;" placeholder="Post Title" value = "<?php echo $post_name; ?>"/>
+<input type = "text" class="newinput" name = "post-title" id="post-title" style = "width:100%;" placeholder="Post Title" value = "<?php echo $post_name . ""; ?>"/>
 <br/>
 <!-- <label for="post-content">:</label> -->
-<textarea id="post-content" class="newinput" name="post-content" rows="30" cols="150" style = "width:100%;" placeholder="Post Content"><?php echo $post_content; ?></textarea>
+<textarea id="post-content" class="newinput" name="post-content" rows="30" cols="150" style = "width:100%;" placeholder="Post Content"><?php echo $post_content . ""; ?></textarea>
 <br/>
 <div style="width:100%;display:flex; justify-content:center;">
 <input type = "submit" value="Post" name = "submit" />
