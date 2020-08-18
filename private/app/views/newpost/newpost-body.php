@@ -12,7 +12,7 @@
 
 <?php 
 
-    if(isset('submit-post')){
+    if(isset('submit')){
         echo "<script type='text/javascript'>alert('Hello World');</script>";
     }
 
