@@ -13,7 +13,12 @@
 <?php 
 
     if(isset($_POST['submit'])){
-        echo "<script type='text/javascript'>alert('Hello World');</script>";
+
+        //Get the data and run SQL Statement to insert into 
+        $tittle = $_POST['post-title'];        
+
+
+        echo "<script type='text/javascript'>alert('$tittle');</script>";
     }
 
 ?>
