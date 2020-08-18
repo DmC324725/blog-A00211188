@@ -40,9 +40,15 @@ class Main extends Controller {
         
     }
     function New_Post($slug = ""){
+        $post = array();
+        if($slug != ""){
+            $this->model('blogmodel');
+            $post = $this->blogmodel->getBlogPost($slug);
+        }
+
         $this->view("template/header");
         $this->view("newpost/newpost-nav");
-        $this->view("newpost/newpost-body");
+        $this->view("newpost/newpost-body",$post);
         $this->view("template/footer");
 
     } 
