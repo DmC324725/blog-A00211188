@@ -37,12 +37,13 @@ class BlogModel extends Model{
         $res = $stmt->fetch();
         return $res;
     }
-    function updateBlogPost($postVals){
+    function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
-        $sql = 'UPDATE blog_posts SET post_name = ? , post_content = ? WHERE slug = ?';
+        $sql = "UPDATE blog_posts SET post_name = '$title' , post_content = '$content' WHERE slug = '$slug'";
+        //$sql = 'UPDATE blog_posts SET post_name = ? , post_content = ? WHERE slug = ?';
         $stmt = $this->db->prepare($sql);
         
-        $stmt->execute($postVals);
+        $stmt->execute();
         //$res = $stmt->fetch();
         //return $res;
     }
