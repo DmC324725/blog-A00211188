@@ -23,7 +23,7 @@
             $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
 
             //Unsetting Variables
-            unset($_POST);
+            unset($_POST, $slug, $post_name, $post_content);
 
         }else{
             $edit_slug = str_replace(' ','_',$edit_post_title);
