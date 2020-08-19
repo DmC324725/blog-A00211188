@@ -39,9 +39,9 @@ class BlogModel extends Model{
     }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
+        echo "<script type='text/javascript'>console.log('Inside Update Statement');</script>";
         $sql = "UPDATE blog_posts SET post_name = '$title' , post_content = '$content' WHERE slug = '$slug'";
         //$sql = 'UPDATE blog_posts SET post_name = ? , post_content = ? WHERE slug = ?';
-        echo "<script type='text/javascript'>console.log('Inside Update Statement');</script>";
         $stmt = $this->db->prepare($sql);
         echo "<script type='text/javascript'>console.log('Prepared');</script>";
         $stmt->execute();
