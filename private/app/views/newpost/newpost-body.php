@@ -14,9 +14,9 @@
 <?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
 
 <?php 
-    $this->model('blogmodel');
+    
     if(isset($_POST['submit'])){
-        
+        $this->model('blogmodel');
         echo "<script type='text/javascript'>console.log('Script Run Started');</script>";
         //Get the data and run SQL Statement to insert into 
         $edit_post_title = $_POST['post-title'];        
