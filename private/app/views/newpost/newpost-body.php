@@ -32,7 +32,7 @@
             $edit_slug = str_replace(' ','_',$edit_post_title);
             $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
             $postVals = array($edit_slug,$edit_post_title,$edit_post_content,'static@email.com');
-            $edit_post = $this->blogmodel->insertBlogPost($postVals);
+            $this->blogmodel->insertBlogPost($postVals);
         }
        
     }

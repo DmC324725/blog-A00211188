@@ -34,8 +34,7 @@ class BlogModel extends Model{
         $sql = 'INSERT INTO blog_posts VALUES(?,?,?,?,now())';
         $stmt = $this->db->prepare($sql);
         $stmt->execute($postVals);
-        $res = $stmt->fetch();
-        return $res;
+        
     }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
