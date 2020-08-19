@@ -1,4 +1,6 @@
-<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>";?>
+<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
+
+
 <form method = "post">
 
 <input type = "text" class="newinput" name = "post-title" id="post-title" style = "width:100%;" placeholder="Post Title" value = "<?php if(is_string($post_name)){echo "$post_name";} ?>"/>
@@ -32,7 +34,6 @@
             $this->model('blogmodel');
             $this->blogmodel->insertBlogPost($postVals);
         }
-       
     }
 
 ?>
