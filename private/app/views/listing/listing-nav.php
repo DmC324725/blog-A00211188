@@ -26,4 +26,3 @@
 <div class="row">
 
  <div id="main" class="s-content__main large-16 column">
- <a href="/main/new_post"><input type = "button" value="New Post"/></a>
