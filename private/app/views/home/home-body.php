@@ -1,3 +1,7 @@
+
+<?php 
+ echo "<script>console.log((!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/');</script>";
+?>
 <article class="entry">
 
                     <header class="entry__header">
