@@ -21,6 +21,10 @@
         $edit_post_content = $_POST['post-content'];
         if(is_string($slug)){
             $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
+
+            //Unsetting Variables
+            unset($_POST);
+
         }else{
             $edit_slug = str_replace(' ','_',$edit_post_title);
             $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
@@ -28,9 +32,6 @@
             
             $edit_post = $this->blogmodel->insertBlogPost($postVals);
         }
-        $homeURL = 'https://' . $_SERVER['HTTP_HOST'] . '/';
-        header("Location: $homeURL");
-        exit;
        
     }
 
