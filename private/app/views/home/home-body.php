@@ -1,6 +1,7 @@
 
 <?php 
- echo "<script>console.log((!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/');</script>";
+ $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+ echo $root;
 ?>
 <article class="entry">
 
