@@ -1,8 +1,4 @@
 
-<?php 
- $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
- echo $root;
-?>
 <article class="entry">
 
                     <header class="entry__header">

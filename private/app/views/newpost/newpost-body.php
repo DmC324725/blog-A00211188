@@ -28,7 +28,9 @@
             
             $edit_post = $this->blogmodel->insertBlogPost($postVals);
         }
-        
+        $homeURL = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+        header("Location: $homeURL");
+        exit;
        
     }
 
