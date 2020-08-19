@@ -19,7 +19,7 @@
         //Get the data and run SQL Statement to insert into 
         $edit_post_title = $_POST['post-title'];        
         $edit_post_content = $_POST['post-content'];
-        if(is_string($slug)){
+        if(is_string($slug) & strlen($slug)>3){
             $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
 
             //Unsetting Variables
