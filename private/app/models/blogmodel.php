@@ -43,8 +43,8 @@ class BlogModel extends Model{
         $stmt = $this->db->prepare($sql);
         
         $stmt->execute($postVals);
-        $res = $stmt->fetch();
-        return $res;
+        //$res = $stmt->fetch();
+        //return $res;
     }
 
 
