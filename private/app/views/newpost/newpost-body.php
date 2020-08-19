@@ -22,12 +22,9 @@
         $edit_post_title = $_POST['post-title'];        
         $edit_post_content = $_POST['post-content'];
         if(is_string($slug) & strlen($slug)>3){
-
-            echo "<script type='text/javascript'>console.log('True Condition Ran');</script>";
             $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
 
         }else{
-            echo "<script type='text/javascript'>console.log('False Condition Ran');</script>";
             $edit_slug = str_replace(' ','_',$edit_post_title);
             $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
             $postVals = array($edit_slug,$edit_post_title,$edit_post_content,'static@email.com');
