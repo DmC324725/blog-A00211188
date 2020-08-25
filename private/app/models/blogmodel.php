@@ -38,12 +38,15 @@ class BlogModel extends Model{
     }
     function createAuthor($vals){
         echo "<script type='text/javascript'>console.log('$vals[0],$vals[1],$vals[2]');</script>";
-        
+        try{
         //Email, name, passwordhash
         $sql = 'INSERT INTO author VALUES(?,?,?)';
         $stmt = $this->db->prepare($sql);
         $stmt->execute($vals);
-       
+        }catch(Exception $e){
+            $mse = $e->getMessage();
+            echo "<script type='text/javascript'>console.log('$mse');</script>";
+        }
 
     }
     function updateBlogPost($slug,$title,$content){
