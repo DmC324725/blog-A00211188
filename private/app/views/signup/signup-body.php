@@ -19,7 +19,7 @@
 
     <div style="width:100%;display:flex; justify-content:center;">
     <h2>Sign Up</h2>
-    </div>
+    </div class="mainblock">
     <div style="width:100%;display:flex; justify-content:center;">
     <input type = "text" class="newinput" name = "signup-user-name" id="signup-user-name"  placeholder="User Name" width=300px />
     <br>
