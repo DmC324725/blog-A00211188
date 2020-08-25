@@ -58,6 +58,12 @@ class Main extends Controller {
         $this->view("login/login-body");
         $this->view("template/footer");
     } 
+    function Signup(){
+        $this->view("template/header");
+        $this->view("signup/signup-nav");
+        $this->view("signup/signup-body");
+        $this->view("template/footer");
+    } 
     function Entry ($slug = "johndoe2slug") {
         $this->model('blogmodel');
         $post = $this->blogmodel->getBlogPost($slug);
