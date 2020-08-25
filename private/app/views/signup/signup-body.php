@@ -4,8 +4,11 @@
     function validateSignup(){
         
         var name = document.getElementById("signup-user-name").value;
-        if(name == null || name == ""){
-        return false;
+        var email = document.getElementById("signup-user-email").value;
+        var password = document.getElementById("signup-user-pass").value;
+        var password2 = document.getElementById("signup-user-pass-repeat").value;
+        if(name == null || name == "" || email == null || email == "" || password == "" || password == null || password2 == "" || password2 == null || password != password2){
+            return false;
         }
         return true;
     }
