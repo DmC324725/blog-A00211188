@@ -36,6 +36,14 @@ class BlogModel extends Model{
         $stmt->execute($postVals);
         
     }
+    function createAuthor($vals){
+        //Email, name, passwordhash
+        $sql = 'INSERT INTO author VALUES(?,?,?)';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($postVals);
+        
+
+    }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
         $sql = "UPDATE blog_posts SET post_name = '$title' , post_content = '$content' WHERE slug = '$slug'";

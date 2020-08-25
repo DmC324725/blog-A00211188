@@ -3,10 +3,10 @@
 <script>
     function validateSignup(){
         
-        var name = document.getElementById("signup-user-name").value;
-        var email = document.getElementById("signup-user-email").value;
-        var password = document.getElementById("signup-user-pass").value;
-        var password2 = document.getElementById("signup-user-pass-repeat").value;
+        var name = document.getElementById("signup-user-name").value.trim();
+        var email = document.getElementById("signup-user-email").value.trim();
+        var password = document.getElementById("signup-user-pass").value.trim();
+        var password2 = document.getElementById("signup-user-pass-repeat").value.trim();
         if(name == null || name == "" || email == null || email == "" || password == "" || password == null || password2 == "" || password2 == null || password != password2){
             return false;
         }
@@ -47,11 +47,19 @@
 <?php 
     
     if(isset($_POST['submit'])){
-         echo "<script type='text/javascript'>console.log('Form was submitted');</script>";
-        // $edit_post_title = $_POST['post-title'];        
+        echo "<script type='text/javascript'>console.log('Form was submitted');</script>";
+        $username = trim(htmlentities($_POST['signup-user-name']));
+        $password = trim(htmlentities($_POST['signup-user-pass']));
+        $email = trim(htmlentities($_POST['signup-user-email']));
+        if($username =="" || $password == "" || $email == ""){
+            return;
+        }
+        $password = password_hash($password,PASSWORD_DEFAULT);
+        
+         // $edit_post_title = $_POST['post-title'];        
         // $edit_post_content = $_POST['post-content'];
         // if(is_string($slug) & strlen($slug)>3){
-        //     $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
+             $this->blogmodel->createAuthor(array($email,$name,$password));
 
         // }else{
         //     $edit_slug = str_replace(' ','_',$edit_post_title);
