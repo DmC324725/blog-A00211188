@@ -4,8 +4,10 @@
     function validateSignup(){
         
         var name = document.getElementById("signup-user-name").value;
-        
+        if(name.equals("")){
         return false;
+        }
+        return true;
     }
 </script>
 <form method = "post" onsubmit="return validateSignup()">
