@@ -59,7 +59,9 @@
          // $edit_post_title = $_POST['post-title'];        
         // $edit_post_content = $_POST['post-content'];
         // if(is_string($slug) & strlen($slug)>3){
-             $this->blogmodel->createAuthor(array($email,$name,$password));
+            echo "<script type='text/javascript'>console.log('Going to input author');</script>";
+             $this->blogmodel->createAuthor(array($email,$username,$password));
+             echo "<script type='text/javascript'>console.log('Input success');</script>";
 
         // }else{
         //     $edit_slug = str_replace(' ','_',$edit_post_title);
