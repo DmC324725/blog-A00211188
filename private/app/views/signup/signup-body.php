@@ -7,7 +7,7 @@
         return false;
     }
 </script>
-<form method = "post">
+<form method = "post" onsubmit="(return validateSignup())">
 
 
 
