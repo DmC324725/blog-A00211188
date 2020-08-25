@@ -2,9 +2,9 @@
 
 <script>
     function validateSignup(){
-        debug;
+        
         var name = document.getElementById("signup-user-name").value;
-        document.alert(name);
+        
         return false;
     }
 </script>
