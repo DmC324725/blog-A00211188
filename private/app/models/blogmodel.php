@@ -41,7 +41,7 @@ class BlogModel extends Model{
         //Email, name, passwordhash
         $sql = 'INSERT INTO author VALUES(?,?,?)';
         $stmt = $this->db->prepare($sql);
-        $stmt->execute($postVals);
+        $stmt->execute($Vals);
         
 
     }
