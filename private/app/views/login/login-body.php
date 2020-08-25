@@ -3,21 +3,19 @@
 
 <form method = "post">
 
-<div class="mainbox">
+
 <div style="width:100%;display:flex; justify-content:center;">
-<label for="login-user-email">Email: </label>
-<input type = "email" class="newinput" name = "login-user-email" id="login-user-email"  placeholder="johndoe@email.com" />
+<input type = "email" class="newinput" name = "login-user-email" id="login-user-email"  placeholder="Email" />
 <br/>
 </div>
 <div style="width:100%;display:flex; justify-content:center;">
-<label for="login-user-password">Password: </label>
-<input type = "password" class="newinput" name = "login-user-pass" id="login-user-pass"   />
+<input type = "password" class="newinput" name = "login-user-pass" placeholder="password" id="login-user-pass"   />
 <br/>
 </div>
 <div style="width:100%;display:flex; justify-content:center;">
 <input type = "submit" value="Login" name = "submit" />
 </div>
-</div>
+
 </form>
 
 <?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
