@@ -5,9 +5,11 @@
 
 
 
-    <h2>Sign Up</h2>
     <div style="width:100%;display:flex; justify-content:center;">
-    <input type = "text" class="newinput" name = "signup-user-name" id="signup-user-name"  placeholder="Email" />
+    <h2>Sign Up</h2>
+    </div>
+    <div style="width:100%;display:flex; justify-content:center;">
+    <input type = "text" class="newinput" name = "signup-user-name" id="signup-user-name"  placeholder="User Name" />
     <br>
     </div>
     <div style="width:100%;display:flex; justify-content:center;">
@@ -19,8 +21,10 @@
     <br>
     </div>
     <div style="width:100%;display:flex; justify-content:center;">
-    <input type = "password" class="newinput" name = "signup-user-pass-repeat" placeholder="password" id="signup-user-pass-repeat"   />
+    <input type = "password" class="newinput" name = "signup-user-pass-repeat" placeholder="Repeat password" id="signup-user-pass-repeat"   />
     <br>
+    </div>
+    <div style="width:100%;display:flex; justify-content:center;">
     <input type = "submit" value="Sign Up" name = "submit" />
 </div>
 
