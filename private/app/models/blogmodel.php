@@ -42,12 +42,12 @@ class BlogModel extends Model{
         //Email, name, passwordhash
         $sql = 'INSERT INTO author VALUES(?,?,?)';
         $stmt = $this->db->prepare($sql);
-        $stmt->execute($vals);
+        $ress = $stmt->execute($vals);
         }catch(Exception $e){
             $mse = $e->getMessage();
             echo "<script type='text/javascript'>console.log('$mse');</script>";
         }
-
+        echo "<script type='text/javascript'>console.log('result  $ress');</script>";
     }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
