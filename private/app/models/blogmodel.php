@@ -37,6 +37,7 @@ class BlogModel extends Model{
         
     }
     function createAuthor($vals){
+        echo "<script type='text/javascript'>console.log('Going to input author blogmodel');</script>";
         //Email, name, passwordhash
         $sql = 'INSERT INTO author VALUES(?,?,?)';
         $stmt = $this->db->prepare($sql);
