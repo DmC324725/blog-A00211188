@@ -62,7 +62,7 @@
             echo "<script type='text/javascript'>console.log('Going to input author');</script>";
             $this->model('blogmodel');
              $this->blogmodel->createAuthor(array($email,$username,$password));
-             echo "<script type='text/javascript'>alert('User Added');</script>";
+             echo "<script type='text/javascript'>window.alert('User Added');</script>";
 
         // }else{
         //     $edit_slug = str_replace(' ','_',$edit_post_title);
