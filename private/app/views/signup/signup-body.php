@@ -4,7 +4,7 @@
     function validateSignup(){
         
         var name = document.getElementById("signup-user-name").value;
-        if(name.equals("")){
+        if(name == null || name == ""){
         return false;
         }
         return true;
