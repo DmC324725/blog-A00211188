@@ -60,6 +60,7 @@
         // $edit_post_content = $_POST['post-content'];
         // if(is_string($slug) & strlen($slug)>3){
             echo "<script type='text/javascript'>console.log('Going to input author');</script>";
+            $this->model('blogmodel');
              $this->blogmodel->createAuthor(array($email,$username,$password));
              echo "<script type='text/javascript'>console.log('Input success');</script>";
 
