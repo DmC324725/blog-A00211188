@@ -38,20 +38,26 @@ class BlogModel extends Model{
     }
     function createAuthor($vals){
         echo "<script type='text/javascript'>console.log('$vals[0],$vals[1],$vals[2]');</script>";
-        
+        try{
         //Email, name, passwordhash
         $sql = 'INSERT INTO author VALUES(?,?,?)';
         $stmt = $this->db->prepare($sql);
         $stmt->execute($Vals);
-        
+        $res = $stmt->resu 
+        }
+        catch(Exception e){
+            
+    }
 
     }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
+        
         $sql = "UPDATE blog_posts SET post_name = '$title' , post_content = '$content' WHERE slug = '$slug'";
         //$sql = 'UPDATE blog_posts SET post_name = ? , post_content = ? WHERE slug = ?';
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
+        
     }
 
 
