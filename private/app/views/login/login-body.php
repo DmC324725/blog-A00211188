@@ -3,7 +3,7 @@
 
 <form method = "post">
 
-
+<div class="mainbox">
 <div style="width:100%;display:flex; justify-content:center;">
 <label for="login-user-email">Email: </label>
 <input type = "email" class="newinput" name = "login-user-email" id="login-user-email"  placeholder="johndoe@email.com" />
@@ -16,6 +16,7 @@
 </div>
 <div style="width:100%;display:flex; justify-content:center;">
 <input type = "submit" value="Login" name = "submit" />
+</div>
 </div>
 </form>
 

@@ -17,7 +17,7 @@
     ================================================== -->
     <link rel="stylesheet" href="/public/css/base.css">
     <link rel="stylesheet" href="/public/css/main.css">
-
+    <link rel="stylesheet" href="/public/css/mycss.css">
     <!-- script
     ================================================== -->
     <script src="/public/js/modernizr.js"></script>
