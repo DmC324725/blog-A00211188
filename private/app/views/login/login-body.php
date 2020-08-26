@@ -1,5 +1,3 @@
-<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
-
 <?php 
     if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
         echo "You are already logged in! <br>";
