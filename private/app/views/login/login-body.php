@@ -23,7 +23,7 @@
              else{
                 if(password_verify($password,$resultAuthor['password_hash'])){
                     //Password is correct. Log in the user
-                    session_start();
+                    
                     $_SESSION['logged_in'] = true;
                     $_SESSION['name'] = $resultAuthor['name'];
                     $_SESSION['email'] = $resultAuthor['email'];
