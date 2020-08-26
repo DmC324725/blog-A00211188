@@ -32,6 +32,9 @@ if(is_string($slug) & strlen($slug)>3 & $author_email != $_SESSION["email"]){
             $this->model('blogmodel');
             $this->blogmodel->insertBlogPost($postVals);
         }
+        echo "Your post is live! <br>";
+        echo "<a href='/'><input type='button' value='Go Back'/></a>";
+        return;
     }
 
 ?>
