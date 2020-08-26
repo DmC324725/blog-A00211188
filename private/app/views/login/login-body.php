@@ -1,7 +1,12 @@
 <?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
 
 <?php 
-    
+    if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
+        echo "You are already logged in! <br>";
+        echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+        return;
+
+    }
      if(isset($_POST['submit'])){
         $useremail = trim(htmlentities($_POST['login-user-email']));
         $password = trim(htmlentities($_POST['login-user-pass']));

@@ -39,6 +39,12 @@ class Main extends Controller {
 
         
     }
+    function Logout(){
+        $this->view("template/header");
+        $this->view("newpost/newpost-nav");
+        $this->view("logout/logout");
+        $this->view("template/footer");
+    }
     function New_Post($slug = ""){
         $post = array();
         if($slug != ""){

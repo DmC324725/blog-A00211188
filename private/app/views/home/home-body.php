@@ -4,6 +4,8 @@
         //Check logged in or not
         if((isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true)){
             echo "Welcome ". $_SESSION["name"]."!";
+            echo"<br>";
+            echo"<a href='/main/logout'><input type='button' value = 'Logout'/></a>;";
         }else{
             echo"<h4><a href='/main/login'>Log In</a> or <a href='/main/signup'>Sign Up</a> here!</h4>";
         }
