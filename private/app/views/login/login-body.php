@@ -2,11 +2,12 @@
 <script>
     function validateSignup(){
         
-        var name = document.getElementById("signup-user-name").value.trim();
+       
         var email = document.getElementById("signup-user-email").value.trim();
         var password = document.getElementById("signup-user-pass").value.trim();
-        var password2 = document.getElementById("signup-user-pass-repeat").value.trim();
-        if(name == null || name == "" || email == null || email == "" || password == "" || password == null || password2 == "" || password2 == null || password != password2){
+        
+        if(email == null || email == "" || password == "" || password == null){
+            alert("Please enter all values");
             return false;
         }
         return true;
@@ -52,7 +53,9 @@
              if($resultAuthor == null || $resultAuthor == ""){
                  echo "User not found!";
              }
-             print_r($resultAuthor);
+             else{
+                 echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+             }
     }
     //     }else{
     //         $edit_slug = str_replace(' ','_',$edit_post_title);
