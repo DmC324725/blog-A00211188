@@ -1,5 +1,40 @@
-<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
+<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; 
+if(!(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true)){
+    echo "You are not logged in! <br>";
+    echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+    return;
 
+}
+if(is_string($slug) & strlen($slug)>3 & $author_email != $_SESSION["email"]){
+    echo "You are not authorized to edit this post! <br>";
+    echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+    return;
+}
+
+?>
+<?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
+
+<?php 
+    
+    if(isset($_POST['submit'])){
+
+        //Get the data and run SQL Statement to insert into 
+        $edit_post_title = $_POST['post-title'];        
+        $edit_post_content = $_POST['post-content'];
+        if(is_string($slug) & strlen($slug)>3){
+            
+            $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
+
+        }else{
+            $edit_slug = str_replace(' ','_',$edit_post_title);
+            $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
+            $postVals = array($edit_slug,$edit_post_title,$edit_post_content,$_SESSION["email"]);
+            $this->model('blogmodel');
+            $this->blogmodel->insertBlogPost($postVals);
+        }
+    }
+
+?>
 
 <form method = "post">
 
@@ -13,24 +48,3 @@
 </div>
 </form>
 
-<?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
-
-<?php 
-    
-    if(isset($_POST['submit'])){
-        //Get the data and run SQL Statement to insert into 
-        $edit_post_title = $_POST['post-title'];        
-        $edit_post_content = $_POST['post-content'];
-        if(is_string($slug) & strlen($slug)>3){
-            $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
-
-        }else{
-            $edit_slug = str_replace(' ','_',$edit_post_title);
-            $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
-            $postVals = array($edit_slug,$edit_post_title,$edit_post_content,'static@email.com');
-            $this->model('blogmodel');
-            $this->blogmodel->insertBlogPost($postVals);
-        }
-    }
-
-?>
