@@ -7,6 +7,6 @@
     session_unset();
     
     echo "You have been successfully logged out! <br>";
-    echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+    echo "<a href='/'><input type='button' value='Go Back'/></a>";
 
 ?>

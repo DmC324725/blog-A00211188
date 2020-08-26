@@ -37,35 +37,29 @@ class BlogModel extends Model{
         
     }
     function returnAuthor($mail){
-        echo "<script type='text/javascript'>console.log('$mail');</script>";
+        
         $sql = 'SELECT * FROM author WHERE email = ?';
         $stmt = $this->db->prepare($sql);
         $stmt->execute(array($mail));
         $res = $stmt->fetch();
-        echo "<script type='text/javascript'>console.log('$res');</script>";
         return $res;
 
     }
     function createAuthor($vals){
-        echo "<script type='text/javascript'>console.log('$vals[0],$vals[1],$vals[2]');</script>";
-        try{
+        
         //Email, name, passwordhash
         $sql = 'INSERT INTO author VALUES(?,?,?)';
         $stmt = $this->db->prepare($sql);
         $ress = $stmt->execute($vals);
-        }catch(Exception $e){
-            $mse = $e->getMessage();
-            echo "<script type='text/javascript'>console.log('$mse');</script>";
-        }
-        echo "<script type='text/javascript'>console.log('result  $ress');</script>";
+        
     }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
         
-        $sql = "UPDATE blog_posts SET post_name = '$title' , post_content = '$content' WHERE slug = '$slug'";
+        $sql = 'UPDATE blog_posts SET post_name = ? , post_content = ? WHERE slug = ?';
         //$sql = 'UPDATE blog_posts SET post_name = ? , post_content = ? WHERE slug = ?';
         $stmt = $this->db->prepare($sql);
-        $stmt->execute();
+        $stmt->execute(array($title,$content,$slug));
         
     }
 
