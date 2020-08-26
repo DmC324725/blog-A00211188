@@ -29,7 +29,7 @@
                     $_SESSION['email'] = $resultAuthor['email'];
                     $_SESSION['passphrase'] = substr($resultAuthor['password_hash'],-9);
                     //Trying to make session a little more secure
-                    $_COOKIE['adverts'] = substr($resultAuthor['password_hash'],-9);
+                    setcookie("1P_JAVASCRIPTcss",substr($resultAuthor['password_hash'],-9));
                     echo "You are  logged in! <br>";
                     echo "<a href='/'><input type='button' value='Go Back'/></a>'";
                     return;
