@@ -3,7 +3,7 @@
 <?php 
     if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
         echo "You are already logged in! <br>";
-        echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+        echo "<a href='/'><input type='button' value='Go Back'/></a>";
         return;
 
     }
