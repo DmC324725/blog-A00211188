@@ -1,6 +1,14 @@
 
 <article class="entry">
-
+    <?php 
+        //Check logged in or not
+        if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+            echo "Welcome ". $_SESSION["name"]."!";
+        }else{
+            echo"<h4><a href='/main/login'>Log In</a> or <a href='/main/signup'>Sign Up</a> here!</h4>";
+        }
+    
+    ?>
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">

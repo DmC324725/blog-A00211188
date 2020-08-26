@@ -27,9 +27,8 @@
                     $_SESSION['logged_in'] = true;
                     $_SESSION['name'] = $resultAuthor['name'];
                     $_SESSION['email'] = $resultAuthor['email'];
-                    $_SESSION['passphrase'] = substr($resultAuthor['password_hash'],-9);
-                    //Trying to make session a little more secure
-                    setcookie("1P_JAVASCRIPTcss",substr($resultAuthor['password_hash'],-9));
+
+                    //$_SESSION['passphrase'] = substr($resultAuthor['password_hash'],-9);
                     echo "You are  logged in! <br>";
                     echo "<a href='/'><input type='button' value='Go Back'/></a>'";
                     return;
