@@ -1,4 +1,39 @@
-<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
+<?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; 
+ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
+    echo "You are already logged in! <br>";
+    echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+    return;
+
+}
+
+?>
+
+<?php 
+    
+    if(isset($_POST['submit'])){
+        echo "<script type='text/javascript'>console.log('Form was submitted');</script>";
+        $username = trim(htmlentities($_POST['signup-user-name']));
+        $password = trim(htmlentities($_POST['signup-user-pass']));
+        $email = trim(htmlentities($_POST['signup-user-email']));
+        if($username =="" || $password == "" || $email == ""){
+            return;
+        }
+        $password = password_hash($password,PASSWORD_DEFAULT);
+        
+            echo "<script type='text/javascript'>console.log('Going to input author');</script>";
+            $this->model('blogmodel');
+             $this->blogmodel->createAuthor(array($email,$username,$password));
+             echo "<script type='text/javascript'>window.alert('User Added');</script>";
+
+             //Need to figure out an alternative as stmt->execute is not returning anything to indicate success or failure of query.
+             echo "User Created Successfully!";
+             echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+             return;
+
+       
+    }
+
+?>
 
 <script>
     function validateSignup(){
@@ -44,35 +79,3 @@
 
 <?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
 
-<?php 
-    
-    if(isset($_POST['submit'])){
-        echo "<script type='text/javascript'>console.log('Form was submitted');</script>";
-        $username = trim(htmlentities($_POST['signup-user-name']));
-        $password = trim(htmlentities($_POST['signup-user-pass']));
-        $email = trim(htmlentities($_POST['signup-user-email']));
-        if($username =="" || $password == "" || $email == ""){
-            return;
-        }
-        $password = password_hash($password,PASSWORD_DEFAULT);
-        
-         // $edit_post_title = $_POST['post-title'];        
-        // $edit_post_content = $_POST['post-content'];
-        // if(is_string($slug) & strlen($slug)>3){
-            echo "<script type='text/javascript'>console.log('Going to input author');</script>";
-            $this->model('blogmodel');
-             $this->blogmodel->createAuthor(array($email,$username,$password));
-             echo "<script type='text/javascript'>window.alert('User Added');</script>";
-
-             //Need to figure out an alternative as stmt->execute is not returning anything to indicate success or failure of query.
-             echo "User Created Successfully!";
-        // }else{
-        //     $edit_slug = str_replace(' ','_',$edit_post_title);
-        //     $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
-        //     $postVals = array($edit_slug,$edit_post_title,$edit_post_content,'static@email.com');
-        //     $this->model('blogmodel');
-        //     $this->blogmodel->insertBlogPost($postVals);
-        // }
-    }
-
-?>
