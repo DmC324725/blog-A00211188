@@ -49,6 +49,9 @@
 
         $this->model('blogmodel');
              $resultAuthor = $this->blogmodel->returnAuthor($useremail);
+             if($resultAuthor == null || $resultAuthor == ""){
+                 echo "User not found!";
+             }
              print_r($resultAuthor);
     }
     //     }else{
