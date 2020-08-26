@@ -1,6 +1,8 @@
 <article class="entry">
-<?php if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
-                    echo"<a href='/main/new_post/$slug'>Edit Post</a>";
+<?php if(isset($_SESSION["logged_in"]) & $_SESSION["logged_in"] === true & $_SESSION["email"] == $author_email){
+                    if($_SESSION["email"] == $author_email){
+                        echo"<a href='/main/new_post/$slug'>Edit Post</a>";
+                    }
     } ?>
                     <header class="entry__header">
 
