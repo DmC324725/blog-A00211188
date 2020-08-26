@@ -1,4 +1,50 @@
 <?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
+
+<?php 
+    
+     if(isset($_POST['submit'])){
+        $useremail = trim(htmlentities($_POST['login-user-email']));
+        $password = trim(htmlentities($_POST['login-user-pass']));
+        
+        if($useremail == ""){
+            echo "Please enter an email!";
+            return;
+        }
+        if($password == ""){
+            echo "Please enter your password!";
+            return;
+        }
+
+        $this->model('blogmodel');
+             $resultAuthor = $this->blogmodel->returnAuthor($useremail);
+             if($resultAuthor == null || $resultAuthor == ""){
+                 echo "User not found!";
+             }
+             else{
+                if(password_verify($password,$resultAuthor['password_hash'])){
+                    //Password is correct. Log in the user
+                    session_start();
+                    $_SESSION['logged_in'] = true;
+                    $_SESSION['name'] = $resultAuthor['name'];
+                    $_SESSION['email'] = $resultAuthor['email'];
+                    $_SESSION['passphrase'] = substr($resultAuthor['password_hash'],-9);
+                    
+                    //Trying to make session a little more secure
+                    $_COOKIE['adverts'] = substr($resultAuthor['password_hash'],-9);
+                    
+                } 
+
+
+                echo "You are  logged in! <br>";
+                echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+                return;
+             }
+    }
+    
+
+?>
+
+
 <script>
     function validateSignup(){
         
@@ -33,37 +79,3 @@
 
 <?php echo "<script type='text/javascript'>console.log('Page Load Complete');</script>";?>
 
-<?php 
-    
-     if(isset($_POST['submit'])){
-        $useremail = trim(htmlentities($_POST['login-user-email']));
-        $password = trim(htmlentities($_POST['login-user-pass']));
-        
-        if($useremail == ""){
-            echo "Please enter an email!";
-            return;
-        }
-        if($password == ""){
-            echo "Please enter your password!";
-            return;
-        }
-
-        $this->model('blogmodel');
-             $resultAuthor = $this->blogmodel->returnAuthor($useremail);
-             if($resultAuthor == null || $resultAuthor == ""){
-                 echo "User not found!";
-             }
-             else{
-                 echo "<a href='/'><input type='button' value='Go Back'/></a>'";
-             }
-    }
-    //     }else{
-    //         $edit_slug = str_replace(' ','_',$edit_post_title);
-    //         $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);
-    //         $postVals = array($edit_slug,$edit_post_title,$edit_post_content,'static@email.com');
-    //         $this->model('blogmodel');
-    //         $this->blogmodel->insertBlogPost($postVals);
-    //     }
-    // }
-
-?>
