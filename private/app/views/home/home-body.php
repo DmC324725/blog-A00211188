@@ -2,7 +2,7 @@
 <article class="entry">
     <?php 
         //Check logged in or not
-        if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+        if((isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true)){
             echo "Welcome ". $_SESSION["name"]."!";
         }else{
             echo"<h4><a href='/main/login'>Log In</a> or <a href='/main/signup'>Sign Up</a> here!</h4>";
