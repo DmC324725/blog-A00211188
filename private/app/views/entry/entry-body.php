@@ -1,6 +1,6 @@
 <article class="entry">
 <?php if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
-                    echo"<a href='/main/new_post/<?php echo $slug; ?>'>Edit Post</a>";
+                    echo"<a href='/main/new_post/$slug'>Edit Post</a>";
     } ?>
                     <header class="entry__header">
 
