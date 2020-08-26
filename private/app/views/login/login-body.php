@@ -47,7 +47,7 @@
             return;
         }
 
-
+        $this->model('blogmodel');
              $resultAuthor = $this->blogmodel->returnAuthor($useremail);
              print_r($resultAuthor);
     }
