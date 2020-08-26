@@ -31,13 +31,15 @@
                     
                     //Trying to make session a little more secure
                     $_COOKIE['adverts'] = substr($resultAuthor['password_hash'],-9);
-                    
-                } 
+                    echo "You are  logged in! <br>";
+                    echo "<a href='/'><input type='button' value='Go Back'/></a>'";
+                    return;
+                } else{
+                    echo "Incorrect Password!";
+                }
 
 
-                echo "You are  logged in! <br>";
-                echo "<a href='/'><input type='button' value='Go Back'/></a>'";
-                return;
+                
              }
     }
     
