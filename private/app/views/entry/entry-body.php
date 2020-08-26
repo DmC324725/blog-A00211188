@@ -1,5 +1,7 @@
 <article class="entry">
-                    <a href="/main/new_post/<?php echo $slug; ?>">Edit Post</a>
+<?php if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true){
+                    echo"<a href='/main/new_post/<?php echo $slug; ?>'>Edit Post</a>";
+    } ?>
                     <header class="entry__header">
 
                         <h2 class="entry__title h1"><?php echo $post_name;?></h2>
