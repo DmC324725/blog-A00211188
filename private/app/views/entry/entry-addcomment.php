@@ -24,7 +24,7 @@
                 <textarea name="cMessage" id="cMessage" class="h-full-width" placeholder="Your Message"></textarea>
             </div>
 
-            <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit">
+            <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="button">
 
         </fieldset>
     </form> <!-- end form -->
