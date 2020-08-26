@@ -64,6 +64,8 @@
              $this->blogmodel->createAuthor(array($email,$username,$password));
              echo "<script type='text/javascript'>window.alert('User Added');</script>";
 
+             //Need to figure out an alternative as stmt->execute is not returning anything to indicate success or failure of query.
+             echo "User Created Successfully!";
         // }else{
         //     $edit_slug = str_replace(' ','_',$edit_post_title);
         //     $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);

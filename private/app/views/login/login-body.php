@@ -1,7 +1,19 @@
 <?php echo "<script type='text/javascript'>console.log('Page Load Started');</script>"; ?>
+<script>
+    function validateSignup(){
+        
+        var name = document.getElementById("signup-user-name").value.trim();
+        var email = document.getElementById("signup-user-email").value.trim();
+        var password = document.getElementById("signup-user-pass").value.trim();
+        var password2 = document.getElementById("signup-user-pass-repeat").value.trim();
+        if(name == null || name == "" || email == null || email == "" || password == "" || password == null || password2 == "" || password2 == null || password != password2){
+            return false;
+        }
+        return true;
+    }
+</script>
 
-
-<form method = "post">
+<form method = "post" onsubmit="return validateSignup()">
 
 
 <div style="width:100%;display:flex; justify-content:center;">
@@ -22,12 +34,23 @@
 
 <?php 
     
-    // if(isset($_POST['submit'])){
-    //     $edit_post_title = $_POST['post-title'];        
-    //     $edit_post_content = $_POST['post-content'];
-    //     if(is_string($slug) & strlen($slug)>3){
-    //         $this->blogmodel->updateBlogPost($slug,$edit_post_title,$edit_post_content);
+     if(isset($_POST['submit'])){
+        $useremail = trim(htmlentities($_POST['login-user-email']));
+        $password = trim(htmlentities($_POST['login-user-pass']));
+        
+        if($useremail == ""){
+            echo "Please enter an email!";
+            return;
+        }
+        if($password == ""){
+            echo "Please enter your password!";
+            return;
+        }
 
+
+             $resultAuthor = $this->blogmodel->returnAuthor($useremail);
+             print_r($resultAuthor);
+    }
     //     }else{
     //         $edit_slug = str_replace(' ','_',$edit_post_title);
     //         $edit_slug = substr($edit_slug,0,20) . rand(1000,9999);

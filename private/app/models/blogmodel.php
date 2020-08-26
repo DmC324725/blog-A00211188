@@ -36,6 +36,16 @@ class BlogModel extends Model{
         $stmt->execute($postVals);
         
     }
+    function returnAuthor($mail){
+        echo "<script type='text/javascript'>console.log('$mail');</script>";
+        $sql = 'SELECT * FROM author WHERE email = ?';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(array($mail));
+        $res = $stmt->fetch();
+        echo "<script type='text/javascript'>console.log('$res');</script>";
+        return $res;
+
+    }
     function createAuthor($vals){
         echo "<script type='text/javascript'>console.log('$vals[0],$vals[1],$vals[2]');</script>";
         try{
