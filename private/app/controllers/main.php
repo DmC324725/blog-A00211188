@@ -16,7 +16,7 @@ class Main extends Controller {
         $this->model('blogmodel');
         $posts = $this->blogmodel->getLatestBlogs();
         foreach($posts as $post){
-            $this->view("template/listing-item",$post);
+            $this->view("template/listing-item-home",$post);
         }
         $this->view("home/home-body-lower");
         $this->view("template/footer");
