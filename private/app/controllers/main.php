@@ -13,6 +13,12 @@ class Main extends Controller {
         $this->view("template/header");
         $this->view("home/home-nav");
         $this->view("home/home-body");
+        $this->model('blogmodel');
+        $posts = $this->blogmodel->getLatestBlogs();
+        foreach($posts as $post){
+            $this->view("template/listing-item",$post);
+        }
+        $this->view("home/home-body-lower");
         $this->view("template/footer");
 
         

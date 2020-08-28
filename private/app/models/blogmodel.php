@@ -53,6 +53,14 @@ class BlogModel extends Model{
         $ress = $stmt->execute($vals);
         
     }
+
+    function getLatestBlogs(){
+        $sql = 'SELECT * FROM blog_posts ORDER BY publish_date DESC LIMIT 5';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $res = $stmt->fetchAll();
+        return $res;
+    }
     function updateBlogPost($slug,$title,$content){
         //slug, title, content, email, time
         
